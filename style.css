@@ -28,8 +28,16 @@ header {
 
 summary {
     list-style-type: none;
-    border: 1px solid green;
     display: flex;
+}
+
+.minusIcon {
+    display: none;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
 }
 
 footer {
