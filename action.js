@@ -20,9 +20,13 @@ const detailLength = openDetails.length;
 for (let i = 0; i < detailLength; i++) {
     openDetails[i].addEventListener('toggle', (Event) => {
         if (openDetails[i].open) {
-            alert('open');
+            var img = document.createElement('img');
+            var src = document.getElementById('accordionIcon');
+            src.appendChild(img);
+            img.src = './assets/images/icon-minus.svg';
+            document.getElementById('accordionIcon').style.display = 'none';
         } else {
-            alert('not open');
+            document.getElementById('accordionIcon').style.display = 'block';
         }
     });
 }
