@@ -31,6 +31,10 @@ summary {
     display: flex;
 }
 
+.plusIcon {
+    display: block;
+}
+
 .minusIcon {
     display: none;
 }

@@ -14,19 +14,32 @@
 
 //Iterate over the details tags to add the event listener.
 //This works for all details.
-const openDetails = document.querySelectorAll('details');
-const detailLength = openDetails.length;
+let openDetails = document.querySelector('details');
+openDetails.addEventListener('toggle', (Event) => {
+    if (openDetails.open) {
+        alert('open');
+    } else {
+        alert('not open');
+    }
+});
 
-for (let i = 0; i < detailLength; i++) {
-    openDetails[i].addEventListener('toggle', (Event) => {
-        if (openDetails[i].open) {
-            var img = document.createElement('img');
-            var src = document.getElementById('accordionIcon');
-            src.appendChild(img);
-            img.src = './assets/images/icon-minus.svg';
-            document.getElementById('accordionIcon').style.display = 'none';
-        } else {
-            document.getElementById('accordionIcon').style.display = 'block';
-        }
+
+//This gives the plusIcon the event listener and changes it to the minus.
+const plusIcon = document.getElementsByClassName('plusIcon');
+const plusIconLength = plusIcon.length;
+for (let i = 0; i < plusIconLength; i++) {
+    plusIcon[i].addEventListener('click', function plusToMinus() {
+        plusIcon[i].style.display = 'none';
+        minusIcon[i].style.display = 'block';
+    });
+}
+
+//Gives minusIcon the E.L. and changes the minusIcon to plusIcon
+const minusIcon = document.getElementsByClassName('minusIcon');
+const minusIconLength = minusIcon.length;
+for (let j = 0; j < minusIconLength; j++) {
+    minusIcon[j].addEventListener('click', function minusToPlus() {
+        plusIcon[j].style.display = 'block';
+        minusIcon[j].style.display = 'none';
     });
 }
