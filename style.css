@@ -52,7 +52,7 @@ h1 {
 
 header::before {
     content: url(./assets/images/icon-star.svg);
-    transform: scale(0.625);
+    transform: scale(0.7);
     margin: 0rem 0rem 0rem 0.625rem;
 }
 
@@ -120,8 +120,18 @@ footer {
         background-repeat: no-repeat;
     }
     main {
-        max-width: 575px;
-        height: fit-content;
+        max-width: 550px;
+        height: auto;
         border-radius: 1.25rem;
+        margin-bottom: 1rem;
     }
+    p{
+        margin-left: 1rem;
+        width: 89%;
+    }
+    h2{
+        font-size: 0.95rem;
+    }
+
+
 }
