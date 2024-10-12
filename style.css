@@ -3,6 +3,8 @@
     --lightPink: hsl(275, 100%, 97%);
     --grayishPurple: hsl(292, 16%, 49%);
     --darkPurple: hsl(292, 42%, 14%);
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 *,
@@ -27,7 +29,7 @@ body {
 }
 
 main {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     width: 90%;
     height: fit-content;
     padding: 1rem;
@@ -36,15 +38,27 @@ main {
 
 header {
     display: flex;
+    align-items: center;
     font-size: 1.25rem;
+    font-weight: 700;
+    margin: 1rem 0rem;
+    border: 1px solid red;
+}
+
+h1 {
+    margin: 0.5rem 1.5rem;
 }
 
 header::before {
     content: url(./assets/images/icon-star.svg);
+    transform: scale(0.625);
+    margin: 0.5rem 0rem;
 }
 
 details summary>* {
     display: inline;
+    margin: 0rem 1rem;
+    width: 75%;
 }
 
 details summary::after {
@@ -60,8 +74,9 @@ summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
-    margin: 1rem 0rem;
+    font-size: 0.70rem;
+    font-weight: 600;
+    margin: 0.625rem 0rem;
 }
 
 h2:hover {
@@ -69,9 +84,18 @@ h2:hover {
     cursor: pointer;
 }
 
+p {
+    font-size: 0.89rem;
+    font-weight: 400;
+    color: var(--grayishPurple);
+    margin: 1rem 1rem;
+    line-height: 1.5rem;
+}
+
 hr {
     width: 100%;
-    margin: auto;
+    border-top: 0.75px solid rgb(238, 226, 226);
+    border-bottom: none;
 }
 
 footer {
@@ -94,8 +118,8 @@ footer {
         background-repeat: no-repeat;
     }
     main {
-        max-width: 500px;
-        height: 500px;
+        max-width: 575px;
+        height: fit-content;
         border-radius: 1.25rem;
     }
 }
